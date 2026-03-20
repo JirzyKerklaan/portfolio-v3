@@ -1,0 +1,27 @@
+body {
+    @apply overflow-x-hidden bg-black scroll-smooth;
+
+    &.no-scroll {
+        @apply overflow-hidden;
+    }
+}
+
+.container {
+    @apply px-6 mx-auto max-w-6xl grid grid-cols-12;
+}
+
+.section-top {
+    @apply flex flex-row justify-between uppercase text-secondary-500 text-xs selection:bg-secondary-500 selection:text-black font-light font-mono;
+
+    span {
+        @apply tracking-widest;
+    }
+
+    a {
+        @apply tracking-wide
+    }
+}
+
+h1,h2,h3,h4,h5,h6,p,span,a {
+    @apply selection:text-black selection:bg-secondary-500;
+}

@@ -1,0 +1,30 @@
+@theme {
+    --font-sans: 'DM Sans', sans-serif;
+    --font-mono: 'Space Mono', sans-serif;
+
+    --color-black: #060606;
+
+    --color-primary-50: oklch(0.992 0.003 67.83);
+    --color-primary-100: oklch(0.984 0.005 67.79);
+    --color-primary-200: oklch(0.965 0.011 63.39);
+    --color-primary-300: oklch(0.948 0.017 67.62);
+    --color-primary-400: oklch(0.932 0.024 67.53);
+    --color-primary-500: oklch(0.913 0.032 68.92); /* DEFAULT */
+    --color-primary-600: oklch(0.762 0.073 73.36);
+    --color-primary-700: oklch(0.606 0.058 73.82);
+    --color-primary-800: oklch(0.45 0.044 74.31);
+    --color-primary-900: oklch(0.294 0.027 71.1);
+    --color-primary-950: oklch(0.216 0.021 69.66);
+
+    --color-secondary-50:  oklch(0.95 0.10 31.9);
+    --color-secondary-100: oklch(0.88 0.22 31.9);
+    --color-secondary-200: oklch(0.78 0.24 31.9);
+    --color-secondary-300: oklch(0.70 0.245 31.9);
+    --color-secondary-400: oklch(0.67 0.245 31.9);
+    --color-secondary-500: oklch(0.6426 0.2442 31.9); /* DEFAULT */
+    --color-secondary-600: oklch(0.57 0.235 31.9);
+    --color-secondary-700: oklch(0.48 0.22 31.9);
+    --color-secondary-800: oklch(0.38 0.18 31.9);
+    --color-secondary-900: oklch(0.25 0.12 31.9);
+    --color-secondary-950: oklch(0.15 0.07 31.9);
+}
