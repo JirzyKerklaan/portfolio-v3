@@ -13,7 +13,7 @@
         }
 
         .projects-content {
-            @apply flex-grow flex flex-col justify-end;
+            @apply flex-grow flex flex-col justify-end pt-4;
 
             .projects-list {
                 @apply w-screen table-fixed -mx-12 text-primary-500;

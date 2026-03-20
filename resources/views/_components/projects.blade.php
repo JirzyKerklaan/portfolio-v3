@@ -15,19 +15,19 @@
                     <tr>
                         <th class="project-year">Year</th>
                         <th class="project-project">Project</th>
-                        <th class="project-client">Client</th>
+                        <th class="project-client">Description</th>
                         <th class="project-role">Role</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach([1,2,3,4,5] as $item)
-                        <tr class="project" data-image="https://www.datocms-assets.com/136821/1773221984-itv_film_stills_review_film_still_07_main_v001_ftrack_review_still.jpg?fit=crop&w=3424">
-                            <td class="project-year">2025</td>
+                    @foreach($projects as $project)
+                        <tr class="project" data-image="{{ $project->image_url }}">
+                            <td class="project-year">{{ $project->year->format('Y') }}</td>
                             <td class="project-project">
-                                <h3 class="project-title">Goedemiddag website</h3>
+                                <h3 class="project-title">{{ $project->client }}</h3>
                             </td>
-                            <td class="project-client">Goedemiddag Online b.v.</td>
-                            <td class="project-role">Full-stack development</td>
+                            <td class="project-client">{{ $project->description }}</td>
+                            <td class="project-role">{{ $project->role }}</td>
                         </tr>
                     @endforeach
                 </tbody>

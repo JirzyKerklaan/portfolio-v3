@@ -10,15 +10,16 @@
             </h2>
 
             <div class="right-now-grid">
-                @foreach([1,2,3,4,5,6] as $item)
-                    <div class="right-now-item">
-                        <div class="right-now-dot"></div>
-                        <div>
-                            <h3 class="right-now-activity">Listening</h3>
-                            <span class="right-now-text">False Confidence - Noah Kahan</span>
-                            <p class="right-now-subtext">on repeat since 2021</p>
-                        </div>
+                {{-- Listening, Reading, Building, Wearing (Shoes), City, Working --}}
+                @foreach($rightNowItems as $item)
+                <div class="right-now-item">
+                    <div class="right-now-dot"></div>
+                    <div>
+                        <h3 class="right-now-activity">{{ $item->category }}</h3>
+                        <span class="right-now-text">{{ $item->text }}</span>
+                        <p class="right-now-subtext">{{ $item->subtext }}</p>
                     </div>
+                </div>
                 @endforeach
             </div>
         </div>
