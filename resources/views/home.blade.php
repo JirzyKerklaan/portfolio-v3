@@ -7,5 +7,10 @@
     @include('_components.hero')
     @include('_components.manifesto')
     @include('_components.right-now')
+    @include('_components.projects')
+
+    <div id="custom-cursor">
+        <img id="cursor-img" src=""/>
+    </div>
 </body>
 </html>

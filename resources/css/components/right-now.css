@@ -23,6 +23,7 @@
 
                     .right-now-dot {
                         @apply h-1.5 w-1.5 aspect-square bg-secondary-500 rounded-full mr-2.25 mt-1.25;
+                        animation: blink 2s infinite;
                     }
 
                     >div {
@@ -49,4 +50,9 @@
             }
         }
     }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .3; }
 }

@@ -9,5 +9,6 @@
 @import './components/hero.css';
 @import './components/manifesto.css';
 @import './components/right-now.css';
+@import './components/projects.css';
 
 @import './layout/global.css';

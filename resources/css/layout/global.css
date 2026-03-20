@@ -1,5 +1,5 @@
 body {
-    @apply overflow-x-hidden bg-black scroll-smooth;
+    @apply overflow-x-hidden bg-black scroll-smooth relative;
 
     &.no-scroll {
         @apply overflow-hidden;
@@ -22,6 +22,6 @@ body {
     }
 }
 
-h1,h2,h3,h4,h5,h6,p,span,a {
+h1,h2,h3,h4,h5,h6,p,span,a,th,td {
     @apply selection:text-black selection:bg-secondary-500;
 }

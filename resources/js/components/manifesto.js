@@ -14,9 +14,9 @@ lines.forEach(line => {
 
 const words = document.querySelectorAll(".manifesto-content h2 .word");
 
-words.forEach(word => (word.style.visibility = "hidden"));
+words.forEach(word => (word.style.opacity = "0.025"));
 
-const scrollDistance = words.length * 300;
+const scrollDistance = words.length * 250;
 
 gsap.timeline({
     scrollTrigger: {
@@ -28,7 +28,7 @@ gsap.timeline({
     },
 })
     .to(words, {
-        visibility: "visible",
-        stagger: 5 / words.length,
-        duration: 1,
+        opacity: 1,
+        stagger: 4 / words.length,
+        duration: 0.001,
     });
