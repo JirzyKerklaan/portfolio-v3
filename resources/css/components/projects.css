@@ -18,6 +18,10 @@
             .projects-list {
                 @apply w-screen table-fixed -mx-12 text-primary-500;
 
+                * {
+                    @apply select-none;
+                }
+
                 .project-year {
                     @apply w-40 pl-12;
                 }

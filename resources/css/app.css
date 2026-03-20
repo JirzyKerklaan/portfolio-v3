@@ -10,5 +10,6 @@
 @import './components/manifesto.css';
 @import './components/right-now.css';
 @import './components/projects.css';
+@import './components/contact.css';
 
 @import './layout/global.css';
