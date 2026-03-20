@@ -29,15 +29,6 @@
                             <td class="project-client">Goedemiddag Online b.v.</td>
                             <td class="project-role">Full-stack development</td>
                         </tr>
-
-                        <tr class="project" data-image="https://www.datocms-assets.com/136821/1773222102-itv_background_stills_review_bg_still_01_main_v004_ftrack_review_still.jpg?fit=crop&fm=webp&h=1704&w=1704">
-                            <td class="project-year">2024</td>
-                            <td class="project-project">
-                                <h3 class="project-title">Avezaat cranes website</h3>
-                            </td>
-                            <td class="project-client">Avezaat group</td>
-                            <td class="project-role">Back-end development</td>
-                        </tr>
                     @endforeach
                 </tbody>
             </table>
