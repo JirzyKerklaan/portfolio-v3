@@ -21,6 +21,9 @@
                 * {
                     @apply select-none;
                 }
+                .project td {
+                    @apply relative;
+                }
 
                 .project-year {
                     @apply w-40 pl-12;
@@ -50,6 +53,10 @@
                 th,
                 td {
                     @apply text-left;
+
+                    a {
+                        @apply w-full block h-full;
+                    }
                 }
 
                 th:last-child {
@@ -57,13 +64,13 @@
                 }
 
                 .project:hover {
-                    @apply bg-secondary-500 text-primary-500 relative;
+                    @apply bg-secondary-500 text-primary-500;
 
                     td {
                         @apply relative z-150;
                     }
 
-                    :after {
+                    td:after {
                         @apply absolute w-full h-full top-0 left-0 -z-10 bg-secondary-500 mix-blend-multiply opacity-40;
                         content: '';
                     }
@@ -75,8 +82,9 @@
 
 #custom-cursor {
     @apply w-64 aspect-[16/9] fixed pointer-events-none z-100 top-0 left-0 opacity-0 will-change-transform;
+    pointer-events: none;
 
     img {
-        @apply w-full h-full object-cover object-center block transform scale-100;
+        @apply w-full h-full object-cover object-center block transform scale-100 pointer-events-none;
     }
 }

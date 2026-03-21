@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
+            $table->string('slug')->unique();
             $table->date('year');
             $table->string('client');
             $table->string('description');
