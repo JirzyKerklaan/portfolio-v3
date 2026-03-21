@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('role');
             $table->string('image_url');
             $table->string('color');
+            $table->string('url');
             $table->timestamps();
         });
     }

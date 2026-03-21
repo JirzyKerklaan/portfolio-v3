@@ -47,16 +47,17 @@
                         <h4>Role</h4>
                         <p>
                             {{ $project->role }}
-{{--                            <span class="dot"></span>--}}
                         </p>
                     </div>
                     <div class="project-view-detail">
                         <h4>Year</h4>
                         <p>{{$project->year->format('Y')}}</p>
                     </div>
-                    <div class="project-view-detail">
-                        <a style="color: {{$project->color}}" href="{{$project->url}}">Visit site</a>
-                    </div>
+                    @if($project->url)
+                        <div class="project-view-detail">
+                            <a target="_blank" style="color: {{$project->color}}" href="{{$project->url}}">Visit site</a>
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>
