@@ -1,9 +1,10 @@
-<html>
-<head>
-    <title>Home | Jirzy Kerklaan</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
-<body>
+@extends('_layout.base')
+
+@section('title')
+    Home
+@endsection
+
+@section('content')
     @include('_components.hero')
     @include('_components.manifesto')
     @include('_components.right-now')
@@ -13,5 +14,4 @@
     <div id="custom-cursor">
         <img id="cursor-img" src=""/>
     </div>
-</body>
-</html>
+@endsection

@@ -88,3 +88,84 @@
         @apply w-full h-full object-cover object-center block transform scale-100 pointer-events-none;
     }
 }
+
+.project-view {
+    .project-view-top {
+        @apply px-12 py-6;
+    }
+
+    .project-view-image {
+        @apply aspect-video w-full bg-secondary-500 relative;
+
+        img {
+            @apply absolute object-cover object-center w-full h-full top-0 left-0 z-10;
+        }
+    }
+
+    .project-view-title {
+        @apply absolute z-40 flex justify-end h-full w-full p-12 flex-col gap-6;
+
+        h1 {
+            @apply text-8xl text-primary-500 font-extrabold uppercase;
+        }
+
+        p {
+            @apply block border-t py-4 text-2xl font-semibold font-mono;
+        }
+    }
+
+    .project-view-image::after {
+        @apply bg-linear-to-b from-transparent to-black absolute w-full h-full z-5;
+        content: '';
+    }
+
+    .project-view-content {
+        @apply p-12 text-primary-500/60 leading-6 font-mono flex flex-row;
+        h3, h4 {
+            @apply font-sans font-light text-xs text-secondary-500 uppercase mb-16 tracking-[.15rem];
+        }
+
+        p {
+            @apply tracking-widest
+        }
+
+        p+p {
+            @apply mt-6;
+        }
+
+        .project-view-story {
+            @apply max-w-2/3 pr-6;
+        }
+
+        .project-view-details {
+            @apply max-w-1/3 w-full mt-21 pl-6;
+        }
+        .project-view-detail {
+            @apply flex flex-col gap-3 text-xs py-8 border-t border-primary-500/15;
+
+            h4 {
+                @apply text-[.625rem] mb-0;
+            }
+
+            p {
+                @apply text-primary-500/50;
+
+                span.dot {
+                    @apply h-[3px] w-[3px] rounded-full bg-primary-500/50 inline-block -mt-1.5;
+                }
+            }
+
+            ul {
+                @apply flex flex-col gap-1.5;
+
+                li {
+                    @apply ml-3 pl-1 list-disc tracking-wider;
+                }
+            }
+
+            a {
+                @apply text-sm uppercase tracking-widest;
+            }
+        }
+    }
+}

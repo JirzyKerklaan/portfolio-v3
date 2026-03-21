@@ -16,9 +16,12 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->date('year');
             $table->string('client');
+            $table->string('title');
             $table->string('description');
+            $table->longText('long_text');
             $table->string('role');
             $table->string('image_url');
+            $table->string('color');
             $table->timestamps();
         });
     }
