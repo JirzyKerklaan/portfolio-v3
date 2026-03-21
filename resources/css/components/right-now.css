@@ -8,7 +8,7 @@
             @apply flex flex-col gap-4 pt-4 h-full;
 
             h2 {
-                @apply flex-grow flex flex-col gap-0 leading-none text-[156px] font-semibold selection:text-black selection:bg-secondary-500 uppercase;
+                @apply flex-grow flex flex-col gap-0 leading-none text-[9.75rem] font-semibold selection:text-black selection:bg-secondary-500 uppercase;
 
                 span:last-child {
                     @apply text-secondary-500;

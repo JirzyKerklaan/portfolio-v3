@@ -8,7 +8,7 @@
     .hero-content {
         @apply flex-grow flex items-end;
         h1 {
-            @apply flex flex-col gap-4 leading-none text-[196px] font-bold selection:text-black selection:bg-secondary-500 uppercase;
+            @apply flex flex-col gap-4 leading-none text-[12.25rem] font-bold selection:text-black selection:bg-secondary-500 uppercase;
         }
     }
 

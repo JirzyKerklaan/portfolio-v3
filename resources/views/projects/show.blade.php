@@ -11,7 +11,7 @@
             <div class="project-view-top">
                 <div class="section-top">
                     <span>/ Project view</span>
-                    <a href="/">X close</a>
+                    <a href="/#projects">X close</a>
                 </div>
             </div>
             <div class="project-view-image">
