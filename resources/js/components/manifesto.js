@@ -31,4 +31,7 @@ gsap.timeline({
         opacity: 1,
         stagger: 4 / words.length,
         duration: 0.001,
+    })
+    .to(words, {
+        delay: .5,
     });

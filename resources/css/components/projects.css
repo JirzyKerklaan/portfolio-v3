@@ -85,7 +85,7 @@
     pointer-events: none;
 
     img {
-        @apply w-full h-full object-cover object-center block transform scale-100 pointer-events-none;
+        @apply w-full h-full object-cover object-center block transform scale-100 pointer-events-none rounded-xs;
     }
 }
 
@@ -115,7 +115,7 @@
     }
 
     .project-view-image::after {
-        @apply bg-linear-to-b from-transparent to-black absolute w-full h-full z-5;
+        @apply bg-linear-to-b from-transparent to-black absolute w-full h-full z-15;
         content: '';
     }
 
