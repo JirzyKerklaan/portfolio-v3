@@ -50,6 +50,11 @@ function initCustomCursor() {
             gsap.to(cursor, { opacity: 0, duration: 0.001, ease: "power2.out" });
             gsap.to(cursorImg, { scale: 1, duration: 0.3, ease: "power3.out" });
         });
+
+
+        project.addEventListener("click", () => {
+           project.classList.add('active');
+        });
     });
 }
 

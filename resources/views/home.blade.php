@@ -1,5 +1,7 @@
 @extends('_layout.base')
 
+@section('namespace', 'home')
+
 @section('title')
     Home
 @endsection

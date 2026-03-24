@@ -63,6 +63,12 @@
                     @apply text-right;
                 }
 
+                .project.active {
+                    td {
+                        @apply z-150;
+                    }
+                }
+
                 .project:hover {
                     @apply bg-secondary-500 text-primary-500;
 

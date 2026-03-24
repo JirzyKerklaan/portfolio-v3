@@ -1,9 +1,10 @@
 @extends('_layout.base')
 
+@section('namespace', 'projects-show')
+
 @section('title')
     {{ $project->client }}
 @endsection
-
 
 @section('content')
     <div class="project-view">
@@ -11,7 +12,7 @@
             <div class="project-view-top">
                 <div class="section-top">
                     <span>/ Project view</span>
-                    <a href="/#projects">X close</a>
+                    <a href="/">X close</a>
                 </div>
             </div>
             <div class="project-view-image">

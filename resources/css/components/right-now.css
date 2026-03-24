@@ -5,7 +5,7 @@
         @apply p-12 h-full flex flex-col gap-4 min-h-screen;
 
         .right-now-content {
-            @apply flex flex-col gap-4 pt-4 h-full;
+            @apply flex flex-col gap-4 pt-4 h-full min-h-screen;
 
             h2 {
                 @apply flex-grow flex flex-col gap-0 leading-none text-[9.75rem] font-semibold selection:text-black selection:bg-secondary-500 uppercase;
