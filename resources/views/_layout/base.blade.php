@@ -1,5 +1,7 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>@yield('title') | Jirzy Kerklaan</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>

@@ -21,15 +21,13 @@
                 </thead>
                 <tbody>
                     @foreach($projects as $project)
-                        <tr class="project" data-image="{{ $project->image_url }}">
-                            <td class="project-year"><a href="/projects/{{$project->slug}}">{{ $project->year->format('Y') }}</a></td>
+                        <tr class="project" data-image="{{ $project->image_url }}" data-barba-link="/projects/{{$project->slug}}">
+                            <td class="project-year">{{ $project->year->format('Y') }}</a></td>
                             <td class="project-project">
-                                <a href="/projects/{{$project->slug}}">
-                                    <h3 class="project-title">{{ $project->client }}</h3>
-                                </a>
+                                <h3 class="project-title">{{ $project->client }}</h3>
                             </td>
-                            <td class="project-client"><a href="/projects/{{$project->slug}}">{{ $project->description }}</a></td>
-                            <td class="project-role"><a href="/projects/{{$project->slug}}">{{ $project->role }}</a></td>
+                            <td class="project-client">{{ $project->description }}</td>
+                            <td class="project-role">{{ $project->role }}</td>
                         </tr>
                     @endforeach
                 </tbody>

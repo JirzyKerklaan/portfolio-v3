@@ -2,7 +2,7 @@
     @apply bg-black text-primary-500 w-full min-h-screen mt-20;
 
     .projects-inner {
-        @apply p-12 h-full flex flex-col gap-4;
+        @apply p-12 h-full flex flex-col gap-4 min-h-screen;
 
         h2 {
             @apply flex-grow flex flex-col gap-0 leading-none text-[9.75rem] font-semibold selection:text-black selection:bg-secondary-500 uppercase mb-12;
