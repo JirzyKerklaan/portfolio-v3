@@ -2,18 +2,18 @@
     @apply bg-black text-primary-500 w-full min-h-screen;
 
     .hero-inner {
-        @apply p-12 h-full flex flex-col gap-4 min-h-screen;
+        @apply h-full flex flex-col gap-4 min-h-screen w-full px-6 py-8 pb-80 lg:p-12;
     }
 
     .hero-content {
         @apply flex-grow flex items-end;
         h1 {
-            @apply flex flex-col gap-4 leading-none text-[12.25rem] font-bold selection:text-black selection:bg-secondary-500 uppercase;
+            @apply flex flex-col gap-4 leading-none text-6xl lg:text-[12.25rem]  font-bold selection:text-black selection:bg-secondary-500 uppercase;
         }
     }
 
     .hero-bottom {
-        @apply pt-8 flex flex-row justify-between relative font-mono;
+        @apply pt-4 lg:pt-8 flex flex-row justify-between relative font-mono;
 
         .hero-bottom-border {
             content: '';

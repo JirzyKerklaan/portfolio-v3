@@ -1,5 +1,5 @@
-body {
-    @apply overflow-x-hidden bg-black scroll-smooth relative;
+body, main {
+    @apply overflow-x-hidden bg-black scroll-smooth relative max-w-screen;
 
     &.no-scroll {
         @apply overflow-hidden;
@@ -18,10 +18,10 @@ body {
     }
 
     a {
-        @apply tracking-wide
+        @apply tracking-wide;
     }
 }
 
 * {
-    @apply selection:text-black selection:bg-secondary-500
+    @apply selection:text-black selection:bg-secondary-500;
 }
