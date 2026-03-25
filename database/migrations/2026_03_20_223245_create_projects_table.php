@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('image_url');
             $table->string('color');
             $table->string('url');
+            $table->boolean('archived')->default(false);
             $table->timestamps();
         });
     }
