@@ -78,7 +78,7 @@
 
                 .project.active {
                     td {
-                        @apply z-150;
+                        @apply z-9999;
                     }
                 }
 
