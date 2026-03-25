@@ -5,7 +5,7 @@
         @apply px-6 py-8 lg:p-12 h-full flex flex-col gap-4 min-h-screen;
 
         h2 {
-            @apply flex-grow flex flex-col gap-0 leading-none text-5xl lg:text-[9.75rem] font-semibold selection:text-black selection:bg-secondary-500 uppercase pb-6 lg:pb-0;
+            @apply flex-grow flex flex-col gap-0 leading-none text-5xl md:text-[7rem] lg:text-[9.75rem] font-semibold selection:text-black selection:bg-secondary-500 uppercase pb-6 lg:pb-0;
 
             span:last-child {
                 @apply text-secondary-500;
@@ -16,7 +16,7 @@
             @apply flex-grow flex flex-col justify-end pt-4;
 
             .projects-list {
-                @apply w-screen table-fixed -mx-12 text-primary-500;
+                @apply w-screen table-fixed -mx-6 lg:-mx-12 text-primary-500;
 
                 * {
                     @apply select-none;
@@ -26,16 +26,29 @@
                 }
 
                 .project-year {
-                    @apply w-40 pl-12;
+                    @apply md:w-32 lg:w-40 md:pl-6 lg:pl-12;
                 }
 
                 .project-role {
-                    @apply w-80 text-right pr-12;
+                    @apply w-80 text-right md:pr-6 lg:pr-12;
+                }
+
+                .project-project {
+                    @apply px-6 md:px-0
                 }
 
                 .project-project,
                 .project-client {
-                    @apply w-1/2;
+                    @apply md:w-full lg:w-1/2;
+                }
+
+                .project-client {
+                    @apply hidden lg:table-cell;
+                }
+
+                .project-year,
+                .project-role {
+                    @apply hidden md:table-cell
                 }
 
                 .projects-list th {
@@ -144,7 +157,7 @@
         }
 
         .project-view-details {
-            @apply lg:max-w-1/3 w-full lg:mt-21 lg:pl-6;
+            @apply lg:max-w-1/3 w-full lg:mt-21 lg:pl-6 lg:order-2
         }
         .project-view-detail {
             @apply flex flex-col gap-3 text-xs py-8 border-t border-primary-500/15;

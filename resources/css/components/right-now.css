@@ -2,13 +2,13 @@
     @apply bg-black text-primary-500 w-full min-h-screen;
 
     .right-now-inner {
-        @apply px-6 py-8 lg:p-12 h-full flex flex-col gap-4 min-h-screen;
+        @apply px-6 py-8 xl:p-12 h-full flex flex-col gap-4 min-h-screen;
 
         .right-now-content {
             @apply flex flex-col gap-4 pt-4 h-full min-h-screen;
 
             h2 {
-                @apply flex-grow flex flex-col gap-0 leading-none text-5xl lg:text-[9.75rem] font-semibold selection:text-black selection:bg-secondary-500 uppercase pb-6 lg:pb-0;
+                @apply flex-grow flex flex-col gap-0 leading-none text-5xl md:text-[7rem] lg:text-[9.75rem] font-semibold selection:text-black selection:bg-secondary-500 uppercase pb-6 xl:pb-0;
 
                 span:last-child {
                     @apply text-secondary-500;
@@ -16,10 +16,10 @@
             }
 
             .right-now-grid {
-                @apply grid gap-y-4 grid-cols-1 lg:grid-cols-3 w-full h-fit mb-12 border-t lg:border-y border-primary-500/15 lg:py-4;
+                @apply grid gap-y-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full h-fit mb-12 border-t xl:border-y border-primary-500/15 xl:py-4;
 
                 .right-now-item {
-                    @apply py-6 px-6 pl-0 lg:py-4 flex flex-row border-b border-primary-500/15;
+                    @apply py-6 px-6 pl-0 flex flex-row border-b border-primary-500/15;
 
                     .right-now-dot {
                         @apply h-1.5 w-1.5 aspect-square bg-secondary-500 rounded-full mr-2.25 mt-1.25;
@@ -45,7 +45,7 @@
                 .right-now-item:nth-child(4),
                 .right-now-item:nth-child(5),
                 .right-now-item:nth-child(6) {
-                    @apply lg:border-t lg:border-primary-500/15 lg:pt-6;
+                    @apply xl:border-t xl:border-primary-500/15 xl:pt-6;
                 }
             }
         }
