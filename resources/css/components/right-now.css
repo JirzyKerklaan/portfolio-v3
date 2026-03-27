@@ -18,8 +18,14 @@
             .right-now-grid {
                 @apply grid gap-y-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full h-fit mb-12 border-t xl:border-y border-primary-500/15 xl:py-4;
 
+                .right-now-item:nth-child(4),
+                .right-now-item:nth-child(5),
+                .right-now-item:nth-child(6) {
+                    @apply xl:border-none xl:border-t xl:border-primary-500/15 xl:pt-6;
+                }
+
                 .right-now-item {
-                    @apply py-6 px-6 pl-0 flex flex-row border-b border-primary-500/15;
+                    @apply py-6 xl:pb-10 px-6 pl-0 flex flex-row border-b border-primary-500/15;
 
                     .right-now-dot {
                         @apply h-1.5 w-1.5 aspect-square bg-secondary-500 rounded-full mr-2.25 mt-1.25;
@@ -41,11 +47,6 @@
                             @apply text-white/30 text-xs lowercase font-mono;
                         }
                     }
-                }
-                .right-now-item:nth-child(4),
-                .right-now-item:nth-child(5),
-                .right-now-item:nth-child(6) {
-                    @apply xl:border-t xl:border-primary-500/15 xl:pt-6;
                 }
             }
         }
