@@ -1,4 +1,4 @@
-<div class="contact">
+<section class="contact">
     <div class="contact-inner">
         <div class="section-top">
             <span>/ Social channels / P. 005</span>
@@ -20,4 +20,4 @@
             <span>&copy; 2026 Jirzy Kerklaan - jirzykerklaan.com</span>
         </div>
     </div>
-</div>
+</section>

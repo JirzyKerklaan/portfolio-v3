@@ -1,4 +1,4 @@
-<div class="manifesto">
+<section class="manifesto">
     <div class="manifesto-inner">
         <div class="section-top">
             <span>/ Manifesto / P. 002</span>
@@ -11,4 +11,4 @@
             </h2>
         </div>
     </div>
-</div>
+</section>

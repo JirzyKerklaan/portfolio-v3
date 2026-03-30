@@ -26,8 +26,14 @@ body, main {
     @apply selection:text-black selection:bg-secondary-500;
 }
 
-
-.seo-hidden {
-    @apply absolute w-px h-px p-0 -m-px overflow-hidden border-none;
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
     clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
 }
