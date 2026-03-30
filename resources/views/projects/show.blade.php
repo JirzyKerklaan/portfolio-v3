@@ -2,9 +2,10 @@
 
 @section('namespace', 'projects-show')
 
-@section('title')
-    {{ $project->client }}
-@endsection
+@section('seo_title', "{$project->seo_title}")
+@section('seo_description', "{$project->seo_description}")
+@section('seo_og_title', "{$project->seo_title}")
+@section('seo_og_description', "{$project->seo_description}")
 
 @section('content')
     <div class="project-view">
