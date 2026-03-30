@@ -9,6 +9,7 @@
     <meta property="og:description" content="@yield('seo_og_description')">
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://jirzykerklaan.nl/">
+    <meta name="robots" content="index, follow">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

@@ -9,6 +9,7 @@
             <h1>
                 <span>Jirzy</span>
                 <span>Kerklaan</span>
+                <span class="seo-hidden">Full-Stack Laravel Developer in Vlaardingen, Netherlands</span>
             </h1>
         </div>
 

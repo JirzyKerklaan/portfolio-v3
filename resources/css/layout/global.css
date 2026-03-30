@@ -25,3 +25,9 @@ body, main {
 * {
     @apply selection:text-black selection:bg-secondary-500;
 }
+
+
+.seo-hidden {
+    @apply absolute w-px h-px p-0 -m-px overflow-hidden border-none;
+    clip: rect(0,0,0,0);
+}
