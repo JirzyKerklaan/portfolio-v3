@@ -8,7 +8,7 @@
     <meta property="og:title" content="@yield('seo_og_title')" />
     <meta property="og:description" content="@yield('seo_og_description')">
     <meta property="og:type" content="website">
-    <link rel="canonical" href="https://jirzykerklaan.nl/">
+    <link rel="canonical" href="{{ url()->current() }}">
     <meta name="robots" content="index, follow">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
