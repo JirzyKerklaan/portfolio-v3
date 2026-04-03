@@ -62,6 +62,17 @@
                     @endif
                 </div>
             </div>
+
+            <div class="project-view-gallery-title">
+                <h3>Gallery</h3>
+            </div>
+            <div class="project-view-gallery">
+                <div class="gallery-item gallery-gif"></div>
+
+                <div class="gallery-item gallery-image"></div>
+
+                <div class="gallery-item gallery-image long"></div>
+            </div>
         </div>
     </div>
 @endsection
