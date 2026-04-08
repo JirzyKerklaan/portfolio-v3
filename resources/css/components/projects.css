@@ -200,38 +200,46 @@
     }
 
     .project-view-gallery {
-        @apply h-fit lg:min-h-screen bg-darkgray p-8 lg:p-12;
+        @apply h-fit lg:min-h-screen bg-darkgray p-8 lg:p-12 grid grid-cols-8 gap-16;
         box-shadow: inset 0 3rem 2rem -2rem rgba(0,0,0,0.5), inset 0 -3rem 2rem -2rem rgba(0,0,0,0.5);
         background-image: radial-gradient(#FFFFFF10 3px, transparent 3px);
         background-size: 2.5rem 2.5rem;
         background-position: center;
 
         .gallery-item {
-            @apply bg-secondary-500 lg:w-2/3 aspect-[45/32];
+            @apply relative rounded overflow-hidden ;
 
-            &:first-child {
-                @apply ml-[12.5%];
+            &.long {
+                @apply aspect-auto lg:w-2/3 h-auto min-h-[800px];
             }
 
-            &:last-child {
-                @apply ml-[0%];
-            }
+            &.mobile {
+                @apply col-span-2 aspect-[407/874] outline-solid outline-black outline-8 rounded-4xl;
 
-            &:nth-child(even) {
-                @apply ml-[33%] my-12;
-            }
-
-            &:first-child {
-                @apply mb-12 mt-0;
-            }
-
-            &.gallery-gif {
-            }
-
-            &.gallery-image {
-                &.long {
-                    @apply aspect-auto lg:w-2/3 h-auto min-h-[800px];
+                &::after {
+                    @apply absolute top-0 left-1/2 w-1/3 -translate-1/2 h-8 rounded-b-xl bg-black;
+                    content: '';
                 }
+
+                &:nth-child(2) {
+                    @apply mt-16;
+                }
+
+                &:nth-child(3) {
+                    @apply mt-32;
+                }
+
+                &:nth-child(4) {
+                    @apply mt-48
+                }
+            }
+
+            &.desktop {
+                @apply col-span-6 aspect-[45/28] border-12 rounded-xl border-b-24 border-black;
+            }
+
+            img,video {
+                @apply w-full h-full absolute top-0 left-0 object-cover object-center border-black;
             }
         }
     }

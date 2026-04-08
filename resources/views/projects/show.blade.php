@@ -67,11 +67,32 @@
                 <h3>Gallery</h3>
             </div>
             <div class="project-view-gallery">
-                <div class="gallery-item gallery-gif"></div>
+                <div class="gallery-item mobile">
+                    <video width="320" height="240" loop muted playsinline>
+                        <source src="/assets/goedemiddag-mobile.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
 
-                <div class="gallery-item gallery-image"></div>
+                <div class="gallery-item mobile">
+                    <video width="320" height="240" loop muted playsinline>
+                        <source src="/assets/test.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
 
-                <div class="gallery-item gallery-image long"></div>
+                <div class="gallery-item mobile">
+                    <img src="/assets/projects/goedemiddag.webp" alt="">
+                </div>
+
+                <div class="gallery-item mobile">
+                    <img src="/assets/projects/goedemiddag.webp" alt="">
+                </div>
+
+
+                <div class="gallery-item desktop">
+                    <img src="/assets/projects/goedemiddag.webp" alt="">
+                </div>
             </div>
         </div>
     </div>
