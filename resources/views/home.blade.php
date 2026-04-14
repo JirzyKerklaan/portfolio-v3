@@ -10,6 +10,7 @@
 @section('content')
     @include('_components.hero')
     @include('_components.manifesto')
+    @include('_components.skills')
     @include('_components.right-now')
     @include('_components.projects')
     @include('_components.contact')
