@@ -18,5 +18,4 @@
     <div id="custom-cursor">
         <img id="cursor-img" src="" alt="Project hover image"/>
     </div>
-    <progress value="0" max="100"></progress>
 @endsection

@@ -59,6 +59,7 @@ barba.init({
                     onComplete: () => overlay.remove()
                 });
 
+                initProgressBar();
                 bindProjectEvents();
             }
         },

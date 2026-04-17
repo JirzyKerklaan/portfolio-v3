@@ -21,6 +21,7 @@
 <body data-barba="wrapper">
     <main data-barba="container" data-barba-namespace="@yield('namespace')">
         @yield('content')
+        <progress value="0" max="100"></progress>
     </main>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3K805ZZWE4"></script>

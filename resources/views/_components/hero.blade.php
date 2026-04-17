@@ -12,7 +12,7 @@
                 <span class="sr-only">Full-Stack Laravel Developer in Vlaardingen, Netherlands</span>
             </h1>
             <p class="sr-only">
-                Jirzy Kerklaan is a full-stack Laravel developer from Vlaardingen, Netherlands, specializing in PHP and modern web applications. Explore projects and get to know me.
+                Jirzy Kerklaan is a full-stack Laravel developer from Vlaardingen, Netherlands, specializing in PHP and modern web applications.
             </p>
         </div>
 

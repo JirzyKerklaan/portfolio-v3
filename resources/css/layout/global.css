@@ -1,5 +1,15 @@
+html,body,main {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
 body, main {
     @apply overflow-x-hidden bg-black scroll-smooth relative max-w-screen;
+
 
     &.no-scroll {
         @apply overflow-hidden;
