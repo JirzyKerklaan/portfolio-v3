@@ -53,7 +53,7 @@
                         @apply tracking-wide text-primary-500/60 relative text-sm lg:text-base pr-2 lg:pr-4 py-1 lg:py-0 whitespace-nowrap;
 
                         &::after {
-                            @apply w-[2px] h-[2px] lg:w-[3px] lg:h-[3px] rounded-full bg-primary-500/60 absolute right-0 left-auto top-1/2 bottom-1/2;
+                            @apply w-0.5 h-0.5 lg:w-0.75 lg:h-0.75 rounded-full bg-primary-500/60 absolute right-0 left-auto top-1/2 bottom-1/2;
                             content: '';
                         }
 

@@ -5,6 +5,7 @@
 
 @import './base/theme.css';
 @import './base/typography.css';
+@import './base/buttons.css';
 
 @import './components/components-dir.css';
 

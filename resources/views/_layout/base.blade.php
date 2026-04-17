@@ -20,6 +20,7 @@
 </head>
 <body data-barba="wrapper">
     <main data-barba="container" data-barba-namespace="@yield('namespace')">
+        <progress value="0" max="100"></progress>
         @yield('content')
     </main>
 

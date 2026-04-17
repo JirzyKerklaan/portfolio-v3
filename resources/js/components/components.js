@@ -1,3 +1,5 @@
+import './progressbar.js';
+
 import './hero.js';
 import './manifesto.js';
 import './skills.js';

@@ -37,3 +37,17 @@ body, main {
     white-space: nowrap;
     border: 0;
 }
+
+progress {
+    @apply fixed w-2/5 lg:w-1/5 h-0.5 rounded-full bg-secondary-500/15 bottom-4 right-1/2 translate-x-1/2 z-999999;
+}
+progress::-webkit-progress-bar {
+    background: transparent;
+}
+progress::-webkit-progress-value {
+    @apply bg-secondary-500;
+}
+progress::-moz-progress-bar {
+    @apply bg-secondary-500;
+    background-attachment: fixed;
+}

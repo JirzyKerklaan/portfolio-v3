@@ -57,7 +57,7 @@
                     </div>
                     @if($project->url)
                         <div class="project-view-detail">
-                            <a target="_blank" style="color: {{$project->color}}" href="{{$project->url}}">Visit site</a>
+                            <a class="btn btn--secondary" target="_blank" href="{{$project->url}}">Visit website</a>
                         </div>
                     @endif
                 </div>
