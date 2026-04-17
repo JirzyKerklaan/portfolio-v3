@@ -1,6 +1,7 @@
 import barba from '@barba/core';
 import { gsap } from 'gsap';
 import {bindProjectEvents} from "./projects.js";
+import {initProgressBar} from "./progressbar.js";
 
 barba.init({
     transitions: [
@@ -90,6 +91,7 @@ barba.init({
                     top: document.getElementById('projects').offsetTop,
                     behavior: 'instant'
                 });
+                initProgressBar();
                 const overlay = document.getElementById('page-overlay');
                 if (!overlay) return;
 

@@ -3,7 +3,7 @@ import {ScrollTrigger} from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-document.addEventListener("DOMContentLoaded", () => {
+export function initProgressBar() {
     gsap.to("progress", {
         value: 100,
         ease: "none",
@@ -14,6 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
             scrub: true
         }
     });
-})
+}
 
+document.addEventListener("DOMContentLoaded", () => {
+    initProgressBar();
+});
 
