@@ -5,7 +5,7 @@ let mouse = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
 let pos = { x: mouse.x, y: mouse.y };
 let setX, setY;
 
-function initCustomCursor() {
+export function initCustomCursor() {
     cursor = document.querySelector("#custom-cursor");
     if (!cursor) return;
 

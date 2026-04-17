@@ -3,6 +3,7 @@
     --font-mono: 'Space Mono', sans-serif;
 
     --color-black: #060606;
+    --color-darkgray: #121212;
 
     --color-primary-50: oklch(0.992 0.003 67.83);
     --color-primary-100: oklch(0.984 0.005 67.79);

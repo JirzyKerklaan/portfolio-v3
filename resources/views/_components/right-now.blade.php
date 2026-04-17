@@ -1,7 +1,7 @@
 <section class="right-now">
     <div class="right-now-inner">
         <div class="section-top">
-            <span>/ Right now / P. 003</span>
+            <span>/ Right now / P. 004</span>
         </div>
         <div class="right-now-content">
             <h2>

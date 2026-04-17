@@ -6,10 +6,6 @@
 @import './base/theme.css';
 @import './base/typography.css';
 
-@import './components/hero.css';
-@import './components/manifesto.css';
-@import './components/right-now.css';
-@import './components/projects.css';
-@import './components/contact.css';
+@import './components/components-dir.css';
 
 @import './layout/global.css';

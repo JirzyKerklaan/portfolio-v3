@@ -1,7 +1,7 @@
 <section class="contact">
     <div class="contact-inner">
         <div class="section-top">
-            <span>/ Social channels / P. 005</span>
+            <span>/ Social channels / P. 006</span>
         </div>
         <div class="contact-content">
             <span>Let's make something legendary.</span>

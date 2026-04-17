@@ -62,6 +62,15 @@
                     @endif
                 </div>
             </div>
+
+{{--            <div class="project-view-gallery-title">--}}
+{{--                <h3>Gallery</h3>--}}
+{{--            </div>--}}
+{{--            <div class="project-view-gallery">--}}
+{{--                <div class="gallery-item mobile">--}}
+{{--                    <img src="/assets/projects/goedemiddag/goedemiddag-home-mobile.gif" alt="">--}}
+{{--                </div>--}}
+{{--            </div>--}}
         </div>
     </div>
 @endsection
