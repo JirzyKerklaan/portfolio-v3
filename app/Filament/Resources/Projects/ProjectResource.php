@@ -2,30 +2,29 @@
 
 namespace App\Filament\Resources\Projects;
 
+use App\Enums\ProjectRoleEnum;
 use App\Filament\Resources\Projects\Pages\ManageProjects;
 use App\Models\Project;
+use App\Models\Tool;
 use BackedEnum;
-use Filament\Actions\BulkActionGroup;
-use Filament\Actions\DeleteAction;
-use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Forms\Components\ColorPicker;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\Toggle;
 use Filament\Resources\Resource;
-use Filament\Schemas\Components\Flex;
 use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Components\Tabs;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Columns\IconColumn;
-use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Filament\Support\Colors\Color;
 
 class ProjectResource extends Resource
 {
@@ -53,8 +52,9 @@ class ProjectResource extends Resource
                                     TextInput::make('description')
                                         ->label('Sector')
                                         ->required(),
-                                    TextInput::make('role')
+                                    Select::make('role')
                                         ->label('My role')
+                                        ->options(ProjectRoleEnum::class)
                                         ->required(),
                                     Grid::make(1)->schema([
                                         FileUpload::make('image_url')
@@ -82,6 +82,11 @@ class ProjectResource extends Resource
                                         ->required(),
                                     Toggle::make('archived')
                                         ->required(),
+                                    Select::make('tools')
+                                        ->label('Languages & Frameworks')
+                                        ->multiple()
+                                        ->relationship('tools', 'tool')
+                                        ->options(Tool::all()->pluck('tool', 'id')),
                                 ]),
                             ]),
                         ]),
@@ -106,12 +111,18 @@ class ProjectResource extends Resource
                 TextColumn::make('client')
                     ->searchable(),
                 TextColumn::make('role')
+                    ->label('Role')
+                    ->badge()
+                    ->color(Color::convertToHex('oklch(0.6426 0.2442 31.9)'))
+                    ->sortable()
                     ->searchable(),
                 IconColumn::make('archived')
+                    ->alignCenter()
                     ->boolean(),
             ])
             ->recordActions([
                 EditAction::make()
+                    ->label('')
                     ->slideOver(),
             ]);
     }

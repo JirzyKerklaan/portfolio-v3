@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\ProjectRoleEnum;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
@@ -11,6 +12,7 @@ class Project extends Model
 
     protected $casts = [
         'year' => 'date',
+        'role' => ProjectRoleEnum::class,
     ];
 
     protected $with = ['tools'];
