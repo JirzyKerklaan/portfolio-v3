@@ -71,9 +71,7 @@
                 </div>
             </div>
 
-            <div class="project-image full-width">
-                <img src="/assets/projects/goedemiddag.webp" alt="">
-            </div>
+            <div class="project-image full-width" style="background-image: url('/assets/projects/goedemiddag.webp')"></div>
 
 
             <div class="project-text">
@@ -81,6 +79,22 @@
                 <div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse eveniet incidunt iure mollitia voluptates. Aperiam, excepturi iure nesciunt numquam optio quae quia totam. Cum cupiditate distinctio doloremque eum iste, iure natus necessitatibus nemo nostrum perspiciatis quasi quo similique soluta sunt tempore tenetur voluptatum? Aliquid atque consectetur dolore est hic laborum quia quo temporibus totam voluptatibus. Ad consequatur, delectus incidunt iure quasi qui recusandae repudiandae rerum!</p>
                 </div>
+            </div>
+
+            <div class="project-buttons">
+                @if($previous)
+                <a class="previous" href="{{route('projects.show', $previous->slug)}}">
+                    <span><x-heroicon-c-arrow-left /> Previous project</span>
+                    {{$previous->title}}
+                </a>
+                @endif
+
+                @if($next)
+                <a class="next" href="{{route('projects.show', $next->slug)}}">
+                    <span>Next project <x-heroicon-c-arrow-right /></span>
+                    {{$next->title}}
+                </a>
+                @endif
             </div>
         </div>
     </div>

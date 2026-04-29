@@ -15,8 +15,22 @@ class ProjectController extends Controller
             ->where('slug', $slug)
             ->firstOrFail();
 
+        $previousProject = Project::query()
+            ->where('archived', false)
+            ->where('year', '>', $project->year)
+            ->orderBy('year')
+            ->first();
+
+        $nextProject = Project::query()
+            ->where('archived', false)
+            ->where('year', '<', $project->year)
+            ->orderBy('year', 'desc')
+            ->first();
+
         return view('projects.show', [
             'project' => $project,
+            'previous' => $previousProject,
+            'next' => $nextProject,
         ]);
     }
 }

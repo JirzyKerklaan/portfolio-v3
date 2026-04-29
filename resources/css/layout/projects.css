@@ -76,10 +76,10 @@
 
             &.full-width {
                 @apply -mx-12 w-screen rounded-none aspect-[16/7];
-
-                img {
-                    @apply rounded-none;
-                }
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
             }
         }
 
@@ -108,6 +108,40 @@
 
                     + p {
                         @apply mt-8 leading-5.75;
+                    }
+                }
+            }
+        }
+
+        .project-buttons {
+            @apply w-full flex flex-row gap-0 w-fit;
+
+            a {
+                @apply flex-grow py-6 text-primary-500 text-4xl transition ease-in-out duration-250 max-w-1/2;
+
+                &.next {
+                    @apply flex flex-col items-end mr-0 ml-auto;
+                }
+
+                span {
+                    @apply flex flex-row gap-2 items-center uppercase text-secondary-500 text-sm selection:bg-secondary-500 selection:text-black font-light font-mono tracking-widest mb-2;
+
+                    svg {
+                        @apply w-4 h-4 transition ease-in-out duration-250;
+                    }
+                }
+
+                &:hover {
+                    @apply text-secondary-500;
+
+                    &.previous {
+                        span>svg {
+                            @apply -translate-x-2;
+                        }
+                    }
+
+                    span>svg {
+                        @apply translate-x-2;
                     }
                 }
             }
