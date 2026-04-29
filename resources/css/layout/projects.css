@@ -117,7 +117,7 @@
             @apply w-full flex flex-row gap-0 w-fit;
 
             a {
-                @apply flex-grow py-6 text-primary-500 text-4xl transition ease-in-out duration-250 max-w-1/2;
+                @apply flex-grow py-6 text-primary-500 text-4xl max-w-1/2;
 
                 &.next {
                     @apply flex flex-col items-end mr-0 ml-auto;
@@ -127,21 +127,19 @@
                     @apply flex flex-row gap-2 items-center uppercase text-secondary-500 text-sm selection:bg-secondary-500 selection:text-black font-light font-mono tracking-widest mb-2;
 
                     svg {
-                        @apply w-4 h-4 transition ease-in-out duration-250;
+                        @apply w-4 h-4 transition duration-200 ease-in-out;
                     }
                 }
 
                 &:hover {
-                    @apply text-secondary-500;
-
                     &.previous {
                         span>svg {
-                            @apply -translate-x-2;
+                            @apply -translate-x-1;
                         }
                     }
 
                     span>svg {
-                        @apply translate-x-2;
+                        @apply translate-x-1;
                     }
                 }
             }
