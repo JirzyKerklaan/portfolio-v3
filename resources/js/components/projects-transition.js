@@ -105,6 +105,44 @@ barba.init({
 
                 bindProjectEvents();
             }
+        },
+        {
+            name: 'project-to-project',
+            from: { namespace: 'projects-show' },
+            to: { namespace: 'projects-show' },
+
+            async leave({current}) {
+                const overlay = document.createElement('div');
+
+                overlay.className = 'w-screen h-screen fixed z-[110] left-0 bg-secondary-500';
+                overlay.style.top = '100%';
+                overlay.id = 'page-overlay';
+
+                document.body.appendChild(overlay);
+
+                await gsap.to(overlay, {
+                    top: '0%',
+                    duration: 0.6,
+                    ease: 'power1.inOut',
+                });
+
+                current.container.style.display = 'none';
+            },
+
+            async enter() {
+                initProgressBar();
+                const overlay = document.getElementById('page-overlay');
+                if (!overlay) return;
+
+                await gsap.to(overlay, {
+                    top: '-100%',
+                    duration: 0.6,
+                    ease: 'power1.inOut',
+                    onComplete: () => overlay.remove()
+                });
+
+                bindProjectEvents();
+            }
         }
     ]
 });
