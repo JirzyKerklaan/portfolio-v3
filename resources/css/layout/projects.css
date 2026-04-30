@@ -76,7 +76,6 @@
 
             &.full-width {
                 @apply -mx-12 w-screen rounded-none aspect-[16/7];
-                background-attachment: fixed;
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;

@@ -130,6 +130,10 @@ barba.init({
             },
 
             async enter() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'instant'
+                });
                 initProgressBar();
                 const overlay = document.getElementById('page-overlay');
                 if (!overlay) return;

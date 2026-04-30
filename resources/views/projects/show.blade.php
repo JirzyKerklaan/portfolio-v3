@@ -59,7 +59,7 @@
             </div>
 
             <div class="project-image">
-                <img src="/assets/projects/goedemiddag.webp" alt="">
+                <img src="/assets/{{$project->image_url}}.webp" alt="">
             </div>
 
             <div class="project-text intro">
@@ -71,7 +71,7 @@
                 </div>
             </div>
 
-            <div class="project-image full-width" style="background-image: url('/assets/projects/goedemiddag.webp')"></div>
+            <div class="project-image full-width" style="background-image: url('/assets/{{$project->image_url}}-mockup.webp')"></div>
 
 
             <div class="project-text">
