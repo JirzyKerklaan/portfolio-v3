@@ -16,7 +16,7 @@ export function initCustomCursor() {
     // Preload project images
     document.querySelectorAll(".project").forEach(p => {
         const img = new Image();
-        img.src = p.dataset.image;
+        img.src = p.dataset.image + '.webp';
     });
 
     setX = gsap.quickSetter(cursor, "x", "px");
@@ -53,7 +53,7 @@ export function bindProjectEvents() {
     updatedProjects.forEach(project => {
         project.addEventListener("mouseenter", () => {
             const imgURL = project.dataset.image;
-            if (cursorImg && imgURL) cursorImg.src = imgURL;
+            if (cursorImg && imgURL) cursorImg.src = imgURL + '.webp';
             gsap.to(cursor, { opacity: 1, duration: 0.001 });
             gsap.to(cursorImg, { scale: 1, duration: 0.3, ease: "power3.out" });
         });
