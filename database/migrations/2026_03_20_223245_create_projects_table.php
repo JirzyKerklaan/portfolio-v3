@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('color');
             $table->string('url');
             $table->boolean('archived')->default(false);
+            $table->string('order')->autoIncrement();
             $table->timestamps();
         });
     }

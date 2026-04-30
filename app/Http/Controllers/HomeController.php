@@ -16,7 +16,7 @@ class HomeController extends Controller
         $rightNowItems = RightNowItem::all();
         $projects = Project::query()
                         ->where('archived', false)
-                        ->orderBy('year', 'desc')
+                        ->orderBy('order', 'desc')
                         ->get();
 
         return view('home', [

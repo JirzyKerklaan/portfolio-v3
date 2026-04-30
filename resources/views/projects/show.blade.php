@@ -11,7 +11,7 @@
     <div class="project-view">
         <div class="project-inner">
             <div class="section-top">
-                <span>/ Project / P. 005</span>
+                <span>/ Project / P. 0{{$project->order}}</span>
                 <a href="/"><x-heroicon-c-arrow-left /> Back to work</a>
             </div>
             <h2>
