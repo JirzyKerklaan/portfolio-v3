@@ -17,13 +17,21 @@ return new class extends Migration
             $table->date('year');
             $table->string('client');
             $table->string('title');
-            $table->string('description');
-            $table->longText('long_text');
+            $table->text('short_description');
             $table->string('role');
-            $table->string('image_url');
+
+            $table->string('cover_img')->nullable();
+            $table->string('mockup_img')->nullable();
+
             $table->string('color');
             $table->string('url');
+
+            $table->longText('description');
+            $table->longText('overview');
+            $table->longText('outcome');
+
             $table->boolean('archived')->default(false);
+            $table->string('order')->autoIncrement();
             $table->timestamps();
         });
     }

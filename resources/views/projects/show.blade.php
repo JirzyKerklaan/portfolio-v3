@@ -9,58 +9,95 @@
 
 @section('content')
     <div class="project-view">
-        <div class="project-view-inner">
-            <div class="project-view-top">
-                <div class="section-top">
-                    <span>/ Project view</span>
-                    <a href="/">X close</a>
-                </div>
+        <div class="project-inner">
+            <div class="section-top">
+                <span>/ Project / P. 0{{$project->order}}</span>
+                <a href="/"><x-heroicon-c-arrow-left /> Back to work</a>
             </div>
-            <div class="project-view-image">
-                <div class="project-view-title">
-                    <h1>{{$project->title}}</h1>
-                    <p style="border-color: {{$project->color}}; color: {{$project->color}}">{{$project->description}}</p>
-                </div>
-                <img src="{{ $project->image_url }}" alt="{{ $project->client }}">
-            </div>
+            <h2>
+                <span>{{$project->title}}</span>
+            </h2>
 
-            <div class="project-view-content">
-                <div class="project-view-story">
-                    <h3>The story</h3>
-                    {!! $project->long_text !!}
-                </div>
+            <div class="project-info">
+                {!! $project->description !!}
 
-                <div class="project-view-details">
-                    <style>
-                        .project-view-detail li::marker {
-                            color: {{$project->color}};
-                        }
-                    </style>
+                <div class="project-info-grid">
+                    <ul>
+                        <li>
+                            <span>Year</span>
+                            <p>
+                            {{$project->year->format('Y')}}
+                            </p>
+                        </li>
 
-                    <div class="project-view-detail">
-                        <h4>The stack</h4>
+                        <li>
+                            <span>Client</span>
+                            <p>
+                            {{$project->client}}
+                            </p>
+                        </li>
+
+                        <li>
+                            <span>Role</span>
+                            <p>
+                                {{$project->role}}
+                            </p>
+                        </li>
+                    </ul>
+
+                    <div>
+                        <span>Tools</span>
                         <ul>
                             @foreach($project->tools as $tool)
-                                <li>{{$tool->tool}}</li>
+                                <li>
+                                    {{$tool->tool}}
+                                </li>
                             @endforeach
                         </ul>
                     </div>
-                    <div class="project-view-detail">
-                        <h4>Role</h4>
-                        <p>
-                            {{ $project->role }}
-                        </p>
-                    </div>
-                    <div class="project-view-detail">
-                        <h4>Year</h4>
-                        <p>{{$project->year->format('Y')}}</p>
-                    </div>
-                    @if($project->url)
-                        <div class="project-view-detail">
-                            <a class="btn btn--secondary" target="_blank" href="{{$project->url}}">Visit website</a>
-                        </div>
-                    @endif
                 </div>
+            </div>
+
+            <div class="project-image">
+                <img src="/assets/{{$project->cover_img}}" alt="">
+            </div>
+
+            @if ($project->overview)
+            <div class="project-text intro">
+                <h3>Overview</h3>
+
+                <div>
+                    {!! $project->overview !!}
+                </div>
+            </div>
+            @endif
+
+            <div class="project-image full-width" style="background-image: url('/assets/{{$project->mockup_img}}')"></div>
+
+
+            @if ($project->outcome)
+            <div class="project-text">
+                <h3>Outcome</h3>
+                <div>
+                    {!! $project->outcome !!}
+                </div>
+            </div>
+            @endif
+
+            <div class="project-buttons">
+                @if($previous)
+                <a class="previous" href="{{route('projects.show', $previous->slug)}}">
+                    <span><x-heroicon-c-arrow-left /> Previous project</span>
+                    {{$previous->title}}
+                </a>
+                @endif
+
+                @if($next)
+                <a class="next" href="{{route('projects.show', $next->slug)}}">
+                    <span>Next project <x-heroicon-c-arrow-right /></span>
+                    {{$next->title}}
+                </a>
+                @endif
             </div>
         </div>
     </div>
