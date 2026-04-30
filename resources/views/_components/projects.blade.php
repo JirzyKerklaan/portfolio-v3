@@ -28,7 +28,7 @@
                                     <h3 class="project-title">{{ $project->client }}</h3>
                                 </a>
                             </td>
-                            <td class="project-client"><a href="/projects/{{$project->slug}}">{{ $project->description }}</a></td>
+                            <td class="project-client"><a href="/projects/{{$project->slug}}">{{ $project->short_description }}</a></td>
                             <td class="project-role"><a href="/projects/{{$project->slug}}">{{ $project->role }}</a></td>
                         </tr>
                     @endforeach

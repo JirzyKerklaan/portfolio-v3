@@ -19,7 +19,7 @@
             </h2>
 
             <div class="project-info">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cupiditate dolor dolorum, ex expedita ipsa iste itaque laudantium nisi omnis possimus quia sequi praesentium.</p>
+                {!! $project->description !!}
 
                 <div class="project-info-grid">
                     <ul>
@@ -62,24 +62,27 @@
                 <img src="/assets/{{$project->image_url}}.webp" alt="">
             </div>
 
+            @if ($project->overview)
             <div class="project-text intro">
                 <h3>Overview</h3>
 
                 <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, accusantium assumenda aut autem consequatur dicta dignissimos dolorem eligendi error ex excepturi, facilis iusto porro repellat ut velit voluptas. Assumenda cum eveniet?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad animi aspernatur assumenda at culpa cumque eaque ex explicabo fuga fugit illo, incidunt ipsam, iusto labore mollitia numquam optio praesentium quis, quo quod rem repudiandae sit tenetur voluptas! A aspernatur assumenda commodi cupiditate delectus error excepturi explicabo pariatur praesentium voluptatem?</p>
+                    {!! $project->overview !!}
                 </div>
             </div>
+            @endif
 
             <div class="project-image full-width" style="background-image: url('/assets/{{$project->image_url}}-mockup.webp')"></div>
 
 
+            @if ($project->outcome)
             <div class="project-text">
                 <h3>Outcome</h3>
                 <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse eveniet incidunt iure mollitia voluptates. Aperiam, excepturi iure nesciunt numquam optio quae quia totam. Cum cupiditate distinctio doloremque eum iste, iure natus necessitatibus nemo nostrum perspiciatis quasi quo similique soluta sunt tempore tenetur voluptatum? Aliquid atque consectetur dolore est hic laborum quia quo temporibus totam voluptatibus. Ad consequatur, delectus incidunt iure quasi qui recusandae repudiandae rerum!</p>
+                    {!! $project->outcome !!}
                 </div>
             </div>
+            @endif
 
             <div class="project-buttons">
                 @if($previous)
