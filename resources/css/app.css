@@ -3,10 +3,11 @@
 
 @source '../../templates/**/*.twig';
 
-@import './base/theme.css';
-@import './base/typography.css';
-@import './base/buttons.css';
+/* Global */
+@import './base/global-dir.css';
 
+/* Components */
 @import './components/components-dir.css';
 
-@import './layout/global.css';
+/* Layout */
+@import './layout/layout-dir.css';
