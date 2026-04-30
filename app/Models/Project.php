@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Project extends Model
 {
-    protected $fillable = ['slug', 'year', 'client', 'title', 'short_description', 'role', 'image_url', 'color', 'url', 'description', 'overview', 'outcome', 'seo_title', 'seo_description'];
+    protected $fillable = ['slug', 'year', 'client', 'title', 'short_description', 'role', 'cover_img', 'mockup_img', 'color', 'url', 'description', 'overview', 'outcome', 'seo_title', 'seo_description'];
 
     protected $casts = [
         'year' => 'date',

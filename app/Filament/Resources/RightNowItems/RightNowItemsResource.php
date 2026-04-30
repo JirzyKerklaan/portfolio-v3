@@ -52,6 +52,7 @@ class RightNowItemsResource extends Resource
             ])
             ->recordActions([
                 EditAction::make()
+                    ->hiddenLabel()
                     ->slideOver(),
             ]);
     }

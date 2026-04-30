@@ -7,6 +7,7 @@ use App\Filament\Resources\Projects\Pages\ManageProjects;
 use App\Models\Project;
 use App\Models\Tool;
 use BackedEnum;
+use Filament\Actions\DeleteAction;
 use Filament\Actions\EditAction;
 use Filament\Forms\Components\ColorPicker;
 use Filament\Forms\Components\DatePicker;
@@ -17,6 +18,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\Toggle;
 use Filament\Resources\Resource;
+use Filament\Schemas\Components\Flex;
 use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Components\Tabs;
 use Filament\Schemas\Schema;
@@ -49,7 +51,7 @@ class ProjectResource extends Resource
                                     TextInput::make('client')
                                         ->label('Client')
                                         ->required(),
-                                    TextInput::make('description')
+                                    TextInput::make('short_description')
                                         ->label('Sector')
                                         ->required(),
                                     Select::make('role')
@@ -57,16 +59,31 @@ class ProjectResource extends Resource
                                         ->options(ProjectRoleEnum::class)
                                         ->required(),
                                     Grid::make(1)->schema([
-                                        FileUpload::make('image_url')
-                                            ->label('Image')
-                                            ->image()
-                                            ->preserveFilenames()
-                                            ->disk('images')
-                                            ->directory('projects')
+                                        Flex::make([
+                                            FileUpload::make('cover_img')
+                                                ->label('Cover image')
+                                                ->image()
+                                                ->preserveFilenames()
+                                                ->disk('images')
+                                                ->directory('projects')
+                                                ->required(),
+                                            FileUpload::make('mockup_img')
+                                                ->label('Mockup image')
+                                                ->image()
+                                                ->preserveFilenames()
+                                                ->disk('images')
+                                                ->directory('projects')
+                                                ->required(),
+                                        ]),
+                                        RichEditor::make('description')
+                                            ->label('Description')
                                             ->required(),
-                                        RichEditor::make('long_text')
-                                            ->label('Content')
-                                            ->required()
+                                        RichEditor::make('overview')
+                                            ->label('Overview text')
+                                            ->required(),
+                                        RichEditor::make('outcome')
+                                            ->label('Outcome text')
+                                            ->required(),
                                     ])->columnSpanFull()
                                 ])->columnSpan(2),
 
@@ -80,13 +97,13 @@ class ProjectResource extends Resource
                                         ->required(),
                                     ColorPicker::make('color')
                                         ->required(),
-                                    Toggle::make('archived')
-                                        ->required(),
                                     Select::make('tools')
                                         ->label('Languages & Frameworks')
                                         ->multiple()
                                         ->relationship('tools', 'tool')
                                         ->options(Tool::all()->pluck('tool', 'id')),
+                                    Toggle::make('archived')
+                                        ->required(),
                                 ]),
                             ]),
                         ]),
@@ -105,25 +122,34 @@ class ProjectResource extends Resource
     {
         return $table
             ->recordTitleAttribute('title')
+            ->defaultSort('year', 'desc')
             ->columns([
+                TextColumn::make('year')
+                    ->date('m / Y')
+                    ->label('Year')
+                    ->sortable(),
                 TextColumn::make('title')
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable(),
                 TextColumn::make('client')
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable(),
                 TextColumn::make('role')
                     ->label('Role')
                     ->badge()
-                    ->color(Color::convertToHex('oklch(0.6426 0.2442 31.9)'))
                     ->sortable()
                     ->searchable(),
                 IconColumn::make('archived')
                     ->alignCenter()
-                    ->boolean(),
+                    ->boolean()
+                    ->sortable(),
             ])
             ->recordActions([
                 EditAction::make()
-                    ->label('')
+                    ->hiddenLabel()
                     ->slideOver(),
+                DeleteAction::make()
+                    ->hiddenLabel(),
             ]);
     }
 

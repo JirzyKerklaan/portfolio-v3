@@ -59,7 +59,7 @@
             </div>
 
             <div class="project-image">
-                <img src="/assets/{{$project->image_url}}.webp" alt="">
+                <img src="/assets/{{$project->cover_img}}" alt="">
             </div>
 
             @if ($project->overview)
@@ -72,7 +72,7 @@
             </div>
             @endif
 
-            <div class="project-image full-width" style="background-image: url('/assets/{{$project->image_url}}-mockup.webp')"></div>
+            <div class="project-image full-width" style="background-image: url('/assets/{{$project->mockup_img}}')"></div>
 
 
             @if ($project->outcome)

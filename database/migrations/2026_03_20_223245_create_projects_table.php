@@ -19,7 +19,10 @@ return new class extends Migration
             $table->string('title');
             $table->text('short_description');
             $table->string('role');
-            $table->string('image_url');
+
+            $table->string('cover_img')->nullable();
+            $table->string('mockup_img')->nullable();
+
             $table->string('color');
             $table->string('url');
 
