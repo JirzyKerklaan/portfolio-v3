@@ -24,10 +24,14 @@
         }
 
         .contact-links {
-            @apply flex flex-row gap-4 md:gap-12 mt-0 md:mt-2 text-primary-500/30 uppercase text-xs font-mono tracking-widest;
+            @apply flex md:flex-row flex-col gap-12 md:gap-0 justify-between;
 
-            a:hover {
-                @apply text-white
+            .contact-socials {
+                @apply flex flex-row gap-4 md:gap-12 mt-0 md:mt-2 text-primary-500/30 uppercase text-xs font-mono tracking-widest;
+
+                a:hover {
+                    @apply text-white
+                }
             }
         }
 

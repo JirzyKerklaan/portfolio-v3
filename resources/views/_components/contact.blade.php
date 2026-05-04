@@ -10,9 +10,16 @@
             <div class="contact-gradient"></div>
 
             <div class="contact-links">
-                <a target="_blank" href="https://www.github.com/JirzyKerklaan">Github</a>
-                <a target="_blank" href="https://www.linkedin.com/in/jirzy-kerklaan">LinkedIn</a>
-                <a target="_blank" href="https://www.instagram.com/jirzy_kerklaan">Instagram</a>
+                <div class="contact-socials">
+                    <a target="_blank" href="https://www.github.com/JirzyKerklaan">Github</a>
+                    <a target="_blank" href="https://www.linkedin.com/in/jirzy-kerklaan">LinkedIn</a>
+                    <a target="_blank" href="https://www.instagram.com/jirzy_kerklaan">Instagram</a>
+                </div>
+                <div class="contact-certificates">
+                    <a target="_blank" href="https://certificates.dev/laravel/certificates/a1b2276b-8e6a-4690-93b4-1a10b09175d6">
+                        @include('certificates.junior-certificate')
+                    </a>
+                </div>
             </div>
         </div>
 
