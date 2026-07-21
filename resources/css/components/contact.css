@@ -11,11 +11,12 @@
                 @apply flex flex-row justify-between uppercase text-secondary-500 text-xs selection:bg-secondary-500 selection:text-black font-light font-mono;
             }
 
-            >a {
+            >button {
                 @apply text-xl md:text-5xl tracking-widest w-fit leading-none font-semibold;
-            }
-            a:hover {
-                @apply text-secondary-500
+
+                &:hover {
+                    @apply text-secondary-500
+                }
             }
         }
 

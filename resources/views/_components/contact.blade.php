@@ -3,9 +3,21 @@
         <div class="section-top">
             <span>/ Social channels / P. 006</span>
         </div>
-        <div class="contact-content">
+        <div class="contact-content" id="contact">
             <span>Let's make something legendary.</span>
-            <a href="mailto:jirzykerklaan@gmail.com">jirzykerklaan@gmail.com</a>
+            <jk-popup>
+                <template #target="{ togglePopup }">
+                    <button @click="togglePopup">
+                        Let's get in contact
+                    </button>
+                </template>
+
+                <template #content>
+                    <div class="popover-form">
+                        <jk-contact-form></jk-contact-form>
+                    </div>
+                </template>
+            </jk-popup>
 
             <div class="contact-gradient"></div>
 
@@ -24,7 +36,7 @@
         </div>
 
         <div class="contact-copyright">
-            <span>&copy; 2026 Jirzy Kerklaan - jirzykerklaan.com</span>
+            <span>&copy; {{\Carbon\Carbon::now()->format('Y')}} Jirzy Kerklaan - jirzykerklaan.com</span>
         </div>
     </div>
 </section>
