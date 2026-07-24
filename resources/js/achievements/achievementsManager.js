@@ -72,22 +72,30 @@ class AchievementsManager {
 
         container.innerHTML = Object.entries(this.achievements)
             .map(([id, achievement]) => {
-                const unlocked = this.state.unlocked.includes(id);
+                let current = achievement.progress(this.state).current;
+                const required = achievement.progress(this.state).required;
+
+                if (current > required) { current = required }
 
                 return `
                 <div class="achievement">
-                    <img src="/achievments/icons/${achievement.icon}.svg" alt="${achievement.title}">
-                    <h3>${achievement.title}</h3>
-                    <p>${achievement.description}</p>
+                    <div class="achievement-inner">
+                        <div class="achievement-info">
+                            <img src="/achievments/icons/${achievement.icon}.svg" alt="${achievement.title}">
+                            <span>
+                                <h3>${achievement.title}</h3>
+                                <p>${achievement.description}</p>
+                            </span>
+                        </div>
 
-                    <div class="progress-numbers">
-                        <span>${achievement.progress(this.state).current}</span>
-                        /
-                        <span>${achievement.progress(this.state).required}</span>
+                        <div class="progress-numbers">
+                            <span>${current}</span>
+                            /
+                            <span>${required}</span>
+                        </div>
                     </div>
-
-                    <div class="progress-bar" data-progress="">
-                        ${Math.round(achievement.progress(this.state).current / achievement.progress(this.state).required * 100)}%
+                    <div class="progress-bar">
+                        <div class="progress-bar__inner" style="transform: scaleX(${current / required});"></div>
                     </div>
                 </div>
             `;

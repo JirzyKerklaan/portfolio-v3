@@ -10,7 +10,7 @@ const achievements = {
         }),
 
         completed: (state) =>
-            state.sectionsVisited.length >= 4
+            state.sectionsVisited.length >= 5
     },
 
     builder: {
