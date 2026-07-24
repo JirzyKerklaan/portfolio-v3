@@ -1,4 +1,4 @@
-<section class="skills">
+<section class="skills" data-section="skills">
     <div class="skills-inner">
         <div class="section-top">
             <span>/ Who am i / P. 003</span>

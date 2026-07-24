@@ -1,0 +1,36 @@
+.achievements-progress {
+    @apply fixed bottom-8 right-8 p-8 w-fit h-fit border-2 border-secondary-500 rounded-3xl bg-black/60 flex flex-col gap-4 min-w-[450px];
+    backdrop-filter: blur(2rem);
+
+    .achievement {
+        @apply flex flex-col gap-2.5;
+
+        .achievement-inner {
+            @apply w-full flex flex-row justify-between items-center;
+        }
+
+        .achievement-info {
+            @apply flex flex-row gap-2.5 items-center;
+
+            img { @apply size-8 bg-secondary-500 }
+
+            span { @apply flex flex-col }
+
+            h3 { @apply text-primary-500 }
+            p { @apply text-primary-500/60 }
+        }
+
+        .progress-numbers {
+            @apply px-1.5 py-1 rounded-md bg-primary-500/10 text-primary-500 w-fit h-fit float-right min-w-[50px] flex items-center justify-center tracking-widest;
+        }
+
+        .progress-bar {
+            @apply col-span-2 h-[2px] bg-secondary-500/30;
+
+            .progress-bar__inner {
+                @apply h-full bg-secondary-500 max-w-full origin-left;
+                transition: all ease-in-out 250ms;
+            }
+        }
+    }
+}

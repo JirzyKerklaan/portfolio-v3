@@ -1,4 +1,4 @@
-<section class="manifesto">
+<section class="manifesto" data-section="manifesto">
     <div class="manifesto-inner">
         <div class="section-top">
             <span>/ Manifesto / P. 002</span>
