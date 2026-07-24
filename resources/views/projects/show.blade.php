@@ -8,7 +8,7 @@
 @section('seo_og_description', "{$project->seo_description}")
 
 @section('content')
-    <div class="project-view">
+    <div class="project-view" data-project="{{ $project->slug }}">
         <div class="project-inner">
             <div class="section-top">
                 <span>/ Project / P. 0{{$project->order}}</span>

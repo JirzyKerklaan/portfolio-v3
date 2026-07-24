@@ -1,4 +1,4 @@
-<section class="projects" id="projects">
+<section class="projects" id="projects" data-section="projects">
     <div class="projects-inner">
         <div class="section-top">
             <span>/ Stuff i built / P. 005</span>

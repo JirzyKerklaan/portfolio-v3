@@ -1,4 +1,4 @@
-<section class="right-now">
+<section class="right-now" data-section="about">
     <div class="right-now-inner">
         <div class="section-top">
             <span>/ Right now / P. 004</span>

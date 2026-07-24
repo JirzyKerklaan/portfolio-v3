@@ -1,11 +1,11 @@
-<section class="contact">
+<section class="contact" data-section="contact">
     <div class="contact-inner">
         <div class="section-top">
             <span>/ Social channels / P. 006</span>
         </div>
         <div class="contact-content">
             <span>Let's make something legendary.</span>
-            <a href="mailto:jirzykerklaan@gmail.com">jirzykerklaan@gmail.com</a>
+            <a href="mailto:contact@jirzykerklaan.nl">contact@jirzykerklaan.nl</a>
 
             <div class="contact-gradient"></div>
 

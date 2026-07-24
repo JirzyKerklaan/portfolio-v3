@@ -23,6 +23,7 @@
         @yield('content')
         <progress value="0" max="100"></progress>
     </main>
+    <div class="achievements-progress" id="achievements-progress"></div>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3K805ZZWE4"></script>
     <script>

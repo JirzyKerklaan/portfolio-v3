@@ -1,0 +1,3 @@
+.achievements-progress {
+    @apply fixed bottom-8 right-8 bg-red-500 w-fit h-fit;
+}
