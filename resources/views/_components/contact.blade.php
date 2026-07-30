@@ -24,7 +24,7 @@
         </div>
 
         <div class="contact-copyright">
-            <span>&copy; 2026 Jirzy Kerklaan - jirzykerklaan.com</span>
+            <span>&copy; 2026 Jirzy Kerklaan - jirzykerklaan.nl</span>
         </div>
     </div>
 </section>
