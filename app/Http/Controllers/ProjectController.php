@@ -13,6 +13,7 @@ class ProjectController extends Controller
     {
         $project = Project::query()
             ->where('slug', $slug)
+            ->where('archived', false)
             ->firstOrFail();
 
         $previousProject = Project::query()
